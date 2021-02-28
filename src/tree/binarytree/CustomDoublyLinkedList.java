@@ -3,23 +3,12 @@ package tree.binarytree;
 public class CustomDoublyLinkedList
 {
     
-    Node head;
-    Node end;
-    
-    class Node{
-        
-        Node prev;
-        Node next;
-        int data;
-        
-        Node(int data){
-            this.data = data;
-        }
-    }
+    LinkedListNode head;
+    LinkedListNode end;
     
     public void add(int data) {
         
-        Node newNode = new Node(data);
+        LinkedListNode newNode = new LinkedListNode(data);
         
         newNode.prev= null;
         newNode.next = head;
@@ -34,7 +23,7 @@ public class CustomDoublyLinkedList
     
     public void addEnd(int data) {
         
-        Node newNode = new Node(data);
+        LinkedListNode newNode = new LinkedListNode(data);
         newNode.next= null;
         
         if(end == null) {
@@ -49,7 +38,7 @@ public class CustomDoublyLinkedList
     
     public void display() {
         
-        Node tmp = head;
+        LinkedListNode tmp = head;
         while(tmp != null) {
             System.out.println( tmp.data );
             
